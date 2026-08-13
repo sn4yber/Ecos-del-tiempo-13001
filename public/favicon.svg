@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ecos del Tiempo">
+  <rect width="64" height="64" rx="12" fill="#0b141a"/>
+  <path d="M16 42h32v6H16zm6-18h20v10H22zm-6-8h32v6H16zm8-8h16v6H24z" fill="#00a884"/>
+  <circle cx="32" cy="24" r="4" fill="#f5d76e"/>
+</svg>

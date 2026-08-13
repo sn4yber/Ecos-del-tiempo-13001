@@ -17,6 +17,11 @@ export const io = new Server(httpServer, {
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
+
+app.get('/favicon.ico', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/favicon.svg'));
+});
+
 app.use(express.static(path.join(__dirname, '../public')));
 
 // Existing Webhooks
