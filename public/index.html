@@ -55,11 +55,19 @@
         // Número que simulará ser el turista en la BD
         const MY_PHONE = '+573009998877';
 
+        function linkify(text) {
+            const urlRegex = /(https?:\/\/[^\s]+)/g;
+            return text.replace(urlRegex, function(url) {
+                return `<a href="${url}" target="_blank" class="text-[#53bdeb] hover:underline underline-offset-2">${url}</a>`;
+            });
+        }
+
         function addMessage(text, isOut = false) {
             const div = document.createElement('div');
             div.className = `flex ${isOut ? 'justify-end' : 'justify-start'}`;
+            const formattedText = linkify(text);
             div.innerHTML = `
-                <div class="${isOut ? 'msg-out' : 'msg-in'} p-2 px-3 max-w-[85%] text-[15px] shadow-sm leading-relaxed whitespace-pre-wrap">${text}</div>
+                <div class="${isOut ? 'msg-out' : 'msg-in'} p-2 px-3 max-w-[85%] text-[15px] shadow-sm leading-relaxed whitespace-pre-wrap">${formattedText}</div>
             `;
             chatBox.appendChild(div);
             chatBox.scrollTop = chatBox.scrollHeight;
