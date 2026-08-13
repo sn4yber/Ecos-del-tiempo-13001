@@ -1,0 +1,40 @@
+{
+  "name": "ecos-del-tiempo-13001",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts --exec 'npx tsx src/server.ts'",
+    "start": "npx tsx src/server.ts",
+    "init-db": "npx tsx src/scripts/init-db.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sn4yber/Ecos-del-tiempo-13001.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sn4yber/Ecos-del-tiempo-13001/issues"
+  },
+  "homepage": "https://github.com/sn4yber/Ecos-del-tiempo-13001#readme",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.19.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.2.0",
+    "@types/pg": "^8.21.0",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
+  }
+}

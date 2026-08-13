@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    container_name: ecos_backend
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - DATABASE_URL=${DATABASE_URL}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - FONTUMI_API_URL=${FONTUMI_API_URL}
+      - FONTUMI_API_KEY=${FONTUMI_API_KEY}
+      - FONTUMI_LOCATION_ID=${FONTUMI_LOCATION_ID}
+    restart: always
