@@ -6,7 +6,7 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY || '';
 const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
 
 // Usamos el modelo rápido y estándar de Gemini
-const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+const model = genAI.getGenerativeModel({ model: 'gemini-flash-latest' });
 
 export const getGeminiResponse = async (context: string, userMessage: string, language: string = 'es'): Promise<string> => {
     try {
